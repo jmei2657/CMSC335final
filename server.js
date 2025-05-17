@@ -27,7 +27,7 @@ app.get("/", (request, response) => {
         loginForm: `<form action="${url}/login" method="post">`,
         createUserForm: `<form action="${url}/createUser" method="post">`,
         display: "",
-        display1: "" 
+        display1: ""
     }
     response.render("index", variables);
 });
