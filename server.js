@@ -16,9 +16,9 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static('public'));
 const portNumber = 5000;
 const httpSuccessStatus = 200;
-const url = "https://cmsc335final-tem9.onrender.com";
+const url = "https://pokemonteambuilder-oj9f.onrender.com";
 // console.log(process.argv);
-// app.listen(portNumber); 
+// app.listen(portNumber);      
 
 console.log(`Web server is running at ${url}`);
 
