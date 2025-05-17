@@ -13,7 +13,7 @@ module.exports = function(app, client, generatePokemon) {
     });
     router.post("/search", async (request, response) => {
         let {search} = request.body;
-        const data = await getPokemon(search.toLowerCase());
+        const data = await getPokemon(search.toLowerCase().replace('-', '').replace(' ', '').replace('.', ''));
         const pokemon = data == null ? null : data.getPokemon;
         const variables = {
             addPokemonForm: `<form action="/teambuild/search" method="post">`,
