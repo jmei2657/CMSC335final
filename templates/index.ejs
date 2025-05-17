@@ -1,0 +1,38 @@
+<!-- DO NOT MODIFY THIS FILE -->
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Pokemon Website</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+	<div id="d1">
+		<div id="d2">
+			<h1>Welcome to the Pokemon Teambuilder!</h1>
+			<strong>Returning User</strong>
+			<%- loginForm %>
+				<fieldset>
+					<div id="display"><%- display %></div>
+					<strong>User: </strong><input type="text" name="name"><br><br>
+					<strong>Password: </strong><input type="text" name="password">
+				</fieldset>
+				<input type="submit" value="Login">
+			</form>
+			<hr>
+			<strong>New User</strong>
+			<%- createUserForm %>
+				<fieldset>
+					<div id="display"><%- display1 %></div>
+					<strong>User: </strong><input type="text" name="name1"><br><br>
+					<strong>Password: </strong><input type="text" name="password1"><br><br>
+					<strong>Confirm Password: </strong><input type="text" name="confirmPassword1">
+				</fieldset>
+				<input type="submit" value="Create User">
+			</form>
+		</div>
+	</div>
+</body>
+</html>

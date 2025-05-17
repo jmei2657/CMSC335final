@@ -1,0 +1,22 @@
+{
+  "name": "cmsc335final",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@favware/graphql-pokemon": "^8.7.1",
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "mongodb": "^6.16.0",
+    "node-localstorage": "^3.0.5",
+    "vite": "^6.3.5"
+  }
+}

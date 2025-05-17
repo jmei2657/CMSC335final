@@ -1,0 +1,46 @@
+#d1 {
+    background-color: white;
+    border-style: groove;
+    border-color:green;
+    border-width: 10px;
+    margin:0rem;
+    padding: 1rem;
+}
+#d2, #teamDisplay {
+    background-color: white;
+}
+#teamDisplay {
+    display: inline-block;
+}
+html {
+    font-size: 14px;
+}
+body {
+    background-color: black;
+    background-image: url(background.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-left: 40rem;
+    margin-right: 40rem;
+    margin-bottom: 10rem;
+    margin-top: 1rem;
+}
+#display {
+    color: red;
+}
+/* .table {
+    border: 0.1rem solid black;
+} */
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+/* .side {
+    border-left: 0.1rem solid black;
+    border-right: 0.1rem solid black;
+} */
+#teamName {
+    font-family: "Lato";
+    font-size:32px;
+}
