@@ -16,16 +16,16 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static('public'));
 const portNumber = 5000;
 const httpSuccessStatus = 200;
-const url = "http://localhost:";
+const url = "https://cmsc335final-tem9.onrender.com";
 // console.log(process.argv);
-app.listen(portNumber); 
+// app.listen(portNumber); 
 
-console.log(`Web server is running at ${url}${portNumber}`);
+console.log(`Web server is running at ${url}`);
 
 app.get("/", (request, response) => {
     const variables = {
-        loginForm: `<form action="${url}${portNumber}/login" method="post">`,
-        createUserForm: `<form action="${url}${portNumber}/createUser" method="post">`,
+        loginForm: `<form action="${url}/login" method="post">`,
+        createUserForm: `<form action="${url}/createUser" method="post">`,
         display: "",
         display1: ""
     }
@@ -53,8 +53,8 @@ app.post("/login", async (request, response) => {
         let result = await collection.findOne(filter);
         if (result === null) {
             const variables = {
-                loginForm: `<form action="${url}${portNumber}/login" method="post">`,
-                createUserForm: `<form action="${url}${portNumber}/createUser" method="post">`,
+                loginForm: `<form action="${url}/login" method="post">`,
+                createUserForm: `<form action="${url}/createUser" method="post">`,
                 display: "Invalid username or password.<br>",
                 display1: ""
             }
@@ -92,13 +92,13 @@ app.post("/createUser", async (request, response) => {
             let i = 1;
             const variables = {
                 team: newUser.team.reduce((a, b) => [`${a[0]}${generatePokemon(b, a[1])}`, a[1] + 1], ["", 1])[0],
-                add: newUser.team.length == 6 ? "" : `<form action="${url}${portNumber}/teambuild/addPokemon" method="post"><input type="submit" value="Add Pokemon"></form>`
+                add: newUser.team.length == 6 ? "" : `<form action="${url}/teambuild/addPokemon" method="post"><input type="submit" value="Add Pokemon"></form>`
             }
             response.render("team", variables);
         } else {
             const variables = {
-                loginForm: `<form action="${url}${portNumber}/login" method="post">`,
-                createUserForm: `<form action="${url}${portNumber}/createUser" method="post">`,
+                loginForm: `<form action="${url}/login" method="post">`,
+                createUserForm: `<form action="${url}/createUser" method="post">`,
                 display: "",
                 display1: `${create}<br>`
             }
