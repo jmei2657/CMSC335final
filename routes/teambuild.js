@@ -27,7 +27,7 @@ module.exports = function(app, client, generatePokemon) {
     router.post("/confirmAdd", async (request, response) => {
         let {confirm} = request.body;
         const search = confirm.slice(4);
-        const data = await getPokemon(search.toLowerCase());
+        const data = await getPokemon(search.toLowerCase().replace('-', '').replace(' ', '').replace('.', ''));
         const pokemon = data.getPokemon;
         try {
             const database = client.db("CMSC335DB");
